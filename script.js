@@ -1,14 +1,15 @@
-// Katas1
-// The first reverseStringFix failed as it only too the first word in the array o
+numberArray = [6, 2, 7, 3, 99, 54, 12, 8, 19, 65];
 
+// Katas1
+// These first one doesn't pass due to the code provided doesn't have the correct pronuncuation in it.  The second one works correctly as there is correct pronunciation in it.
 function reverseString(string) {
-    let newString = string.reverse();
+    let newString = string.split().reverse().join();
     return newString;
 }
 
 function testReverseString() {
-    let result = reverseStringFix("galaxy phones rock");
-    console.log(result === "kcor senohp yxalag", {
+    let result = reverseString("galaxy phones rock");
+    console.assert(result === "kcor senohp yxalag", {
         "function": "reverseString(Galaxy Phones Rock)",
         "expected": "kcoR senohP yxalaG",
         "result": result
@@ -66,10 +67,67 @@ testReverseSentenceFix();
 
 
 // Katas3
+// The first one failed due to trying to multiple the numberArray after it is being told to get the lowest number which gives you 4.  The second one works due to negation of the multiplication.
+function lowestNumber() {
+    let lowNumber = (Math.min(...numberArray) * 2);
+    return lowNumber;
+}
 
+function lowNumberChecker() {
+    let result = lowestNumber(numberArray)
+    console.assert(result === 2, {
+        "funtion": "lowestNumber(numberArray)",
+        "expected": "2",
+        "result": result
+    })
+}
+lowNumberChecker();
+
+function lowestNumberFix() {
+    let lowNumberfix = (Math.min(...numberArray));
+    return lowNumberfix;
+}
+
+function lowNumberCheckerFix() {
+    let result = lowestNumberFix(numberArray)
+    console.log(result === 2, {
+        "funtion": "lowestNumber(numberArray)",
+        "expected": "2",
+        "result": result
+    })
+}
+lowNumberCheckerFix();
 
 // Katas4
+function highestNumber() {
+    let highNumber = (Math.max(...numberArray) % 3);
+    return highNumber;
+}
 
+function highNumberChecker() {
+    let result = highestNumber(numberArray)
+    console.assert(result === 99, {
+        "funtion": "lowestNumber(numberArray)",
+        "expected": "99",
+        "result": result
+    })
+}
+highNumberChecker();
+
+function highestNumberFix() {
+    let highNumberfix = (Math.max(...numberArray));
+    return highNumberfix;
+}
+
+function highNumberCheckerFix() {
+    let result = highestNumberFix(numberArray)
+    console.log(result === 99, {
+        "funtion": "lowestNumber(numberArray)",
+        "expected": "99",
+        "result": result
+    })
+}
+highNumberCheckerFix();
 
 // Katas5
 
