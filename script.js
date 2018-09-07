@@ -107,7 +107,7 @@ function highestNumber() {
 function highNumberChecker() {
     let result = highestNumber(numberArray)
     console.assert(result === 99, {
-        "funtion": "lowestNumber(numberArray)",
+        "funtion": "highestNumber(numberArray)",
         "expected": "99",
         "result": result
     })
@@ -122,7 +122,7 @@ function highestNumberFix() {
 function highNumberCheckerFix() {
     let result = highestNumberFix(numberArray)
     console.log(result === 99, {
-        "funtion": "lowestNumber(numberArray)",
+        "funtion": "highestNumber(numberArray)",
         "expected": "99",
         "result": result
     })
@@ -130,11 +130,49 @@ function highNumberCheckerFix() {
 highNumberCheckerFix();
 
 // Katas5
+let x = 4
+let y = 3
+function remainder() {
+    let result = x / y;
+    console.assert(result >= 2, {
+        "funtion": "remainder()",
+        "expected": "1",
+        "result": result
+    })
+}
+remainder();
 
+function remainderFix() {
+    let resultFix = x % y;
+    console.log(resultFix >= 1, {
+        "funtion": "remainderFix()",
+        "expected": "1",
+        "result": resultFix
+})
+}
+remainderFix();
 
 // Katas6
+let distinctValuesArray = [1, 3, 5, 3, 7, 3, 1, 1, 5]
+function distinctArrayCheck() {
+    let uniqueValues = distinctValuesArray.filter;
+    console.assert(uniqueValues === 1, 3, 5, 7, {
+        "funtion": "distinctArrayCheck()",
+        "expected": "1, 3, 5, 7",
+        "result": uniqueValues
 
+    })}
+distinctArrayCheck();
 
+function distinctArrayCheckFix() {
+    let uniqueValuesFix = [...new Set(distinctValuesArray)];
+    console.assert(uniqueValuesFix === 1, 3, 5, 7, {
+        "funtion": "distinctArrayCheckFix()",
+        "expected": "1, 3, 5, 7",
+        "result": uniqueValuesFix
+    })
+}
+distinctArrayCheckFix();
 // Katas7
 
 
